@@ -6,9 +6,10 @@ export const pageId = 'fire-vs-fire'
 export const usesPhysics = false
 
 const GITHUB = 'https://github.com/LuckyCowMoo/Fire-vs-Fire'
-const PDF = '/assets/fire-vs-fire-report.pdf'
+const PDF = 'https://luckycowmoo.github.io/public/assets/fire-vs-fire-report.pdf'
 const VIDEO = '/assets/fire-vs-fire-demo.mp4'
-const DESCRIPTION = 'Fire-vs-Fire is my final-year undergraduate dissertation project (which earned a First!). It is a universal, locally run AI-filter browser extension accessible even on low-end consumer laptops, paired with a companion backend server running outside the browser environment for deeper hardware access. Fire-vs-Fire is open-source and designed for users to bring their own models; while the prototype AI-detection models currently sit at 75% accuracy with more on the way, secondary object-detection models (such as automatically blurring all spiders) are already highly effective.'
+const VIDEO_LINK = 'https://luckycowmoo.github.io/public/assets/fire-vs-fire-demo.mp4'
+const DESCRIPTION = 'Fire-vs-Fire is my final-year undergraduate paper (which earned a First!). It is a universal, locally run AI-filter browser extension accessible even on low-end consumer laptops, paired with a companion backend server running outside the browser environment for deeper hardware access. Fire-vs-Fire is open-source and designed for users to bring their own models; while the prototype AI-detection models currently sit at 75% accuracy with more on the way, secondary object-detection models (such as automatically blurring all spiders) are already highly effective.'
 
 const screenVert = `
   varying vec2 vUv;
@@ -138,7 +139,7 @@ export function createPage(ctx) {
     g.fillStyle = '#f0d59a'
     g.textAlign = 'center'
     g.textBaseline = 'middle'
-    wrapGold(g, 'FIRE VS FIRE — BSc (Hons) Dissertation — First Class Honours (25,000 Words) — L. Armstrong', 90, 220, 588, 78)
+    wrapGold(g, 'FIRE VS FIRE — BSc (Hons) Paper — First Class Honours (25,000 Words) — L. Armstrong', 90, 220, 588, 78)
   }, renderer)
   const spine = makeCanvasTexture(128, 1024, (g) => {
     g.fillStyle = '#140e0a'
@@ -250,13 +251,13 @@ export function createPage(ctx) {
   root.className = 'page-root'
   root.innerHTML = `
     <section class="top-band">
-      <p class="eyebrow">Undergraduate dissertation</p>
+      <p class="eyebrow">Undergraduate paper</p>
       <h1 class="serif">Fire-vs-Fire</h1>
       <p class="desc">${DESCRIPTION}</p>
       <div class="link-row">
         <a href="${GITHUB}" target="_blank" rel="noopener noreferrer">GitHub repository</a>
-        <a href="${PDF}" target="_blank" rel="noopener noreferrer">Full 25,000-word dissertation</a>
-        <a href="${VIDEO}" target="_blank" rel="noopener noreferrer">Demonstration video</a>
+        <a href="${PDF}" target="_blank" rel="noopener noreferrer">Full 25,000-word paper</a>
+        <a href="${VIDEO_LINK}" target="_blank" rel="noopener noreferrer">Demonstration video</a>
       </div>
     </section>
   `

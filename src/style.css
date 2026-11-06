@@ -250,6 +250,124 @@ h1, h2, p { margin: 0; }
   padding: 0.4rem 0.8rem;
 }
 
+.circuit-copy {
+  background: linear-gradient(180deg, rgba(7, 17, 14, 0.78) 0%, rgba(7, 17, 14, 0.42) 72%, transparent 100%);
+  border-radius: 0 0 16px 0;
+  max-width: min(30rem, 46vw);
+}
+
+.truth-hud {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.15rem;
+  color: #d7f3e8;
+  background: rgba(6, 18, 16, 0.82);
+  border: 1px solid rgba(90, 196, 156, 0.38);
+  border-radius: 12px;
+  padding: 0.5rem 0.65rem 0.6rem;
+  font: 650 0.74rem "Segoe UI", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.truth-hud p {
+  margin-bottom: 0.35rem;
+  color: #9dffe0;
+  font-size: 0.72rem;
+}
+
+.truth-hud table { border-collapse: collapse; width: 100%; }
+
+.truth-hud th, .truth-hud td {
+  padding: 0.1rem 0.42rem;
+  text-align: center;
+}
+
+.truth-hud th { color: #8eb5a6; font-weight: 650; }
+
+.truth-hud tr.active td {
+  background: #3ef0b0;
+  color: #062117;
+}
+
+.btn.circuit-go {
+  animation: circuit-pulse 1s ease-in-out infinite;
+}
+
+@keyframes circuit-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 1px rgba(90, 255, 200, 0.45), 0 0 8px rgba(55, 240, 160, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(214, 255, 236, 1), 0 0 22px rgba(55, 240, 160, 0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn.circuit-go { animation: none; box-shadow: 0 0 0 2px #8dffd2, 0 0 14px rgba(55, 240, 160, 0.8); }
+}
+
+.grades-copy {
+  background: linear-gradient(180deg, rgba(8, 12, 16, 0.78) 0%, rgba(8, 12, 16, 0.38) 78%, transparent 100%);
+  border-radius: 0 0 16px 0;
+  max-width: min(32rem, 48vw);
+}
+
+.insight-card {
+  position: fixed;
+  z-index: 7;
+  width: min(18.5rem, 78vw);
+  padding: 0.85rem 0.95rem 0.8rem;
+  color: #f4fbff;
+  background: rgba(14, 22, 30, 0.46);
+  border: 1px solid rgba(190, 220, 255, 0.38);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+.insight-card[hidden] { display: none !important; }
+
+.insight-kicker {
+  color: #9ad7ff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+}
+
+.insight-card h2 {
+  margin: 0.35rem 0 0.7rem;
+  font: 600 1.02rem/1.35 "Segoe UI", sans-serif;
+}
+
+.pii-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.pii-flow span {
+  padding: 0.22rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.pii-arrow { background: transparent !important; border: 0 !important; padding: 0 !important; color: #c5d7e6; }
+
+.pii-strip {
+  color: #ffb4b0;
+  text-decoration: line-through;
+}
+
+.pii-note {
+  margin-top: 0.65rem;
+  color: #d5fff1;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 720px) {
   .hub-head { padding-top: 4vh; }
   .top-band, .side-copy { padding: 0.9rem 0.9rem 0.4rem; }

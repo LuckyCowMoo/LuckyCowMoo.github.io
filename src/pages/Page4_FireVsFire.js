@@ -9,7 +9,7 @@ const GITHUB = 'https://github.com/LuckyCowMoo/Fire-vs-Fire'
 const PDF = 'https://luckycowmoo.github.io/simple-page/fire-vs-fire-paper.pdf'
 const VIDEO = '/assets/fire-vs-fire-demo.mp4'
 const VIDEO_LINK = 'https://luckycowmoo.github.io/public/assets/fire-vs-fire-demo.mp4'
-const DESCRIPTION = 'Fire-vs-Fire is my final-year undergraduate paper (which earned a First!). It is a universal, locally run AI-filter browser extension accessible even on low-end consumer laptops, paired with a companion backend server running outside the browser environment for deeper hardware access. Fire-vs-Fire is open-source and designed for users to bring their own models; while the prototype AI-detection models currently sit at 75% accuracy with more on the way, secondary object-detection models (such as automatically blurring all spiders) are already highly effective.'
+const DESCRIPTION = 'Fire-vs-Fire is my final-year undergraduate paper.'
 
 const screenVert = `
   varying vec2 vUv;
